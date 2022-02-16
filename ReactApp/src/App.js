@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Axente Ion RM-191
         </a>
       </header>
     </div>
