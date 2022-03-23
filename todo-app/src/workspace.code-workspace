@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "AgroBot_00",
+			"path": "..\\..\\..\\..\\..\\..\\..\\Desktop\\AgroBOT Parts\\AgroBot_00"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"algorithm": "cpp",
+			"xutility": "cpp"
+		}
+	}
+}
