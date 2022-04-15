@@ -1,20 +1,29 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+import {Overview} from "./components/Overview";
+import rootStore from './mst/Provider.store';
 
-import { Layout } from 'antd'
-import { HeaderLayout } from './Layouts/HeaderLayout'
-import { ContentLayout } from './Layouts/ContentLayout'
 
 function App() {
-    return (
-        <>
-            <Layout className='layout'>
-                <HeaderLayout />
-                <ContentLayout />
-            </Layout>
-        </>
-    )
+  const [rootStoreState] = React.useState(rootStore.getLocalStorage())
+  React.useEffect(()=>{
+    console.log('')
+  }, [rootStoreState])
+
+
+  return (
+    <div className="App">
+        <Overview masini={rootStore.masini}
+        />
+        <button onClick={rootStore.saveToLocalStorage}>Save to Local Storage</button>
+        <br />
+        <button onClick={rootStore.clearLocalStorage}>Clear Local Storage</button>
+        <br />
+        <button onClick={rootStore.setLocalStorageTestData}>Set Local Storage test data</button>
+        <br />
+        
+    </div>
+  );
 }
 
-export default App
+export default App;

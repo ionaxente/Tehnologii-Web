@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 .App {
   text-align: center;
 }
@@ -35,4 +36,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+#components-layout-demo-top-side .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl #components-layout-demo-top-side .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+  margin: 5vh;
+}
+
+td {
+  border: 1px solid gray;
+  width: 30em;
+}
+
+.Table-Header {
+  background-color: #1890ff;
+}
+
+.radio {
+  margin : 0 0 0 30px;
 }
