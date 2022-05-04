@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Form, Alert } from 'react-bootstrap';
 import Login from '../Login/Login';
-
+import Contact from '../Contact/Contact'
+import Contact2 from '../Contact/Contact2'
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+import {Outlet, Link} from "react-router-dom"
 
 function Registration() {
 
@@ -89,6 +92,7 @@ function Registration() {
                         <option>Full Stack</option>
                     </Form.Control>
                 </div>
+                
 
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
@@ -107,6 +111,23 @@ function Registration() {
                     <p><strong>Address:</strong> Chisinau</p>
                     <p><strong>Phone:</strong> 37360805368</p>
                     <p><strong>Email:</strong> axente.ion@iis.utm.md</p>
+                    <ul>
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/contact2">Contact 2</a>
+                            </li>
+                    </ul>
+                    <div className="form-group">
+                        
+                        <Router>
+                            <Routes>
+                                <Route path="/contact" element={<Contact/>} />
+                                <Route path="/contact2" element={<Contact2/>} />
+                            </Routes>
+                        </Router>
+                    </div>
                 </div>}
         </>
     )
